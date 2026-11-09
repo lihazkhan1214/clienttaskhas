@@ -11,11 +11,15 @@
 
   <div id="drink">
     <h1>{{ title }}</h1>
-    <div :style="divStructure" v-for="eachDrink in drink" :key="eachDrink.counter">
-      <h2 :style="divText">{{ eachDrink.drink_name }}</h2>
+    <div :style="[divStructure]" v-for="eachDrink in drink" :key="eachDrink.counter">
+      <h2 :style="[divText]">{{ eachDrink.drink_name }}</h2>
       <p>{{ eachDrink.fact }}</p>
     </div>
   </div>
 
+
+
+
+  </div>
 </body>
 </html>
