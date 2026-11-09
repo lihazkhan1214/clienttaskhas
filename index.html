@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js Projects</title>
+    <style>
+        :root { --bg: #f6f4ef; --card: #ffffff; --ink: #23201b; --muted: #6b655c; --line: #e3ded4; --accent: #2f7d5b; }
+        * { box-sizing: border-box; }
+        body { margin: 0; background: var(--bg); color: var(--ink); font-family: Georgia, "Times New Roman", serif; }
+        .wrap { max-width: 860px; margin: 0 auto; padding: 48px 20px 64px; }
+        h1 { font-size: 2.2rem; margin: 0 0 6px; }
+        .sub { color: var(--muted); margin: 0 0 32px; font-family: Arial, sans-serif; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+        .card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 20px; display: flex; flex-direction: column; gap: 8px; }
+        .tag { font-family: Arial, sans-serif; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: var(--accent); }
+        .card h2 { font-size: 1.25rem; margin: 0; }
+        .card p { font-family: Arial, sans-serif; font-size: 14px; color: var(--muted); margin: 0; line-height: 1.5; }
+        .links { margin-top: auto; padding-top: 8px; display: flex; flex-wrap: wrap; gap: 8px; }
+        .links a { font-family: Arial, sans-serif; font-size: 14px; text-decoration: none; color: #fff; background: var(--accent); padding: 7px 12px; border-radius: 6px; }
+        .links a:hover { background: #245f45; }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h1>Vue.js Projects</h1>
+        <p class="sub">Advanced Web Development exercises. Open any project to test it.</p>
+
+        <div class="grid">
+            <div class="card">
+                <span class="tag">Exercise</span>
+                <h2>Intro to Vue.js</h2>
+                <p>Prologue template powered by Vue: header, portfolio, list, quiz and hover colors.</p>
+                <div class="links"><a href="intro-vue/index.html">Open</a></div>
+            </div>
+
+            <div class="card">
+                <span class="tag">Exercise</span>
+                <h2>Vue Part II</h2>
+                <p>Drink list with a Next Drink button and a dropdown that stay in sync.</p>
+                <div class="links"><a href="vue-part-2/vue2.html">Open</a></div>
+            </div>
+
+            <div class="card">
+                <span class="tag">Exercise</span>
+                <h2>Vue Part III</h2>
+                <p>Style binding with style objects, and a computed random drink title.</p>
+                <div class="links"><a href="vue-part-3/VueIII.html">Open</a></div>
+            </div>
+
+            <div class="card">
+                <span class="tag">Exercise</span>
+                <h2>Vue Part IV</h2>
+                <p>A reusable toast component with its own state and props.</p>
+                <div class="links"><a href="vue-part-4/component.html">Open</a></div>
+            </div>
+
+            <div class="card">
+                <span class="tag">Exercise</span>
+                <h2>Vue Part V</h2>
+                <p>Computed café name, and a hover menu that shows each drink's description.</p>
+                <div class="links">
+                    <a href="vue-part-5/cafe/cafe.html">Café name</a>
+                    <a href="vue-part-5/Vue5_start/Vue5_start.html">Hover menu</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <span class="tag">Project 5</span>
+                <h2>Dawgs</h2>
+                <p>Spaniel photos from the Dog API with Axios: a photo wall and a slideshow.</p>
+                <div class="links">
+                    <a href="dawgs/DawgsAPI.html">Photo wall</a>
+                    <a href="dawgs/slideshow.html">Slideshow</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
