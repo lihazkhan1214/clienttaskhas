@@ -69,7 +69,7 @@
 							</header>
 
 							<footer>
-								<a href="#portfolio" class="button scrolly">{{ buttonText }}</a>
+								<a href="#portfolio" class="button scrolly">{{ introButton }}</a>
 							</footer>
 
 						</div>
@@ -88,13 +88,13 @@
 							<div class="row">
 								<div class="col-4 col-12-mobile">
 									<article class="item">
-										<a :href="image1" class="image fit"><img :src="image1" alt="" /></a>
+										<a href="#" class="image fit"><img :src="image1" alt="" /></a>
 										<header>
 											<h3>{{ imgText1 }}</h3>
 										</header>
 									</article>
 									<article class="item">
-										<a :href="image2" class="image fit"><img :src="image2" alt="" /></a>
+										<a href="#" class="image fit"><img :src="image2" alt="" /></a>
 										<header>
 											<h3>{{ imgText2 }}</h3>
 										</header>
@@ -102,13 +102,13 @@
 								</div>
 								<div class="col-4 col-12-mobile">
 									<article class="item">
-										<a :href="image3" class="image fit"><img :src="image3" alt="" /></a>
+										<a href="#" class="image fit"><img :src="image3" alt="" /></a>
 										<header>
 											<h3>{{ imgText3 }}</h3>
 										</header>
 									</article>
 									<article class="item">
-										<a :href="image4" class="image fit"><img :src="image4" alt="" /></a>
+										<a href="#" class="image fit"><img :src="image4" alt="" /></a>
 										<header>
 											<h3>{{ imgText4 }}</h3>
 										</header>
@@ -116,20 +116,19 @@
 								</div>
 								<div class="col-4 col-12-mobile">
 									<article class="item">
-										<a :href="image5" class="image fit"><img :src="image5" alt="" /></a>
+										<a href="#" class="image fit"><img :src="image5" alt="" /></a>
 										<header>
 											<h3>{{ imgText5 }}</h3>
 										</header>
 									</article>
 									<article class="item">
-										<a :href="image6" class="image fit"><img :src="image6" alt="" /></a>
+										<a href="#" class="image fit"><img :src="image6" alt="" /></a>
 										<header>
 											<h3>{{ imgText6 }}</h3>
 										</header>
 									</article>
 								</div>
 							</div>
-
 
 						</div>
 					</section>
@@ -157,58 +156,48 @@
 								<h2>{{ listTitle }}</h2>
 							</header>
 
-							<ul style="display: inline-block; text-align: left; padding-left: 20px;">
+							<ul style="text-align: left; padding-left: 20px;">
 								<li v-for="favorite in favorites">{{ favorite }}</li>
 							</ul>
 
 						</div>
 					</section>
 
-				<!-- Quiz -->
+				<!-- Fill in the blank -->
 					<section id="conditional" class="three">
 						<div class="container">
 
-							<header>
-								<h2>Quiz</h2>
-							</header>
-
-							<div style="margin-bottom: 30px;">
-								<p>What is the name of your teacher?</p>
-								<!-- <input v-model="teacherName"> -->
-								<p v-on:click="teacherName='John'" style="display: inline-block; cursor: pointer; margin: 0 6px 12px; padding: 6px 18px; border: 1px solid #c9cdd1; border-radius: 6px;">John</p>
-								<p v-on:click="teacherName='Tyler'" style="display: inline-block; cursor: pointer; margin: 0 6px 12px; padding: 6px 18px; border: 1px solid #c9cdd1; border-radius: 6px;">Tyler</p>
-								<p v-on:click="teacherName='Claire'" style="display: inline-block; cursor: pointer; margin: 0 6px 12px; padding: 6px 18px; border: 1px solid #c9cdd1; border-radius: 6px;">Claire</p>
-								<p v-on:click="teacherName='Leah'" style="display: inline-block; cursor: pointer; margin: 0 6px 12px; padding: 6px 18px; border: 1px solid #c9cdd1; border-radius: 6px;">Leah</p>
-								<p v-if="teacherName == 'Claire'"><strong>Correct. The teacher's name is {{ teacherName }}</strong></p>
-								<p v-if="teacherName != 'Claire' && teacherName != ''"><strong>Not yet. Keep trying!</strong></p>
+							<div>
+								<!-- What is the name of your teacher? <input v-model="teacherName"> -->
+								What is the name of your teacher?
+								<p v-on:click="teacherName='John'">John</p>
+								<p v-on:click="teacherName='Tyler'">Tyler</p>
+								<p v-on:click="teacherName='Claire'">Claire</p>
+								<p v-on:click="teacherName='Leah'">Leah</p>
+								<p v-if="teacherName == 'Claire'">Correct. The teacher's name is {{ teacherName }}</p>
+								<p v-if="teacherName != 'Claire' && teacherName != ''">Not yet. Keep trying</p>
 							</div>
 
 							<div>
-								<p>Which JavaScript framework are we learning in this class?</p>
-								<input v-model="framework">
-								<p v-if="framework.toLowerCase() == 'vue'"><strong>Correct! We are learning {{ framework }}.</strong></p>
-								<p v-if="framework.toLowerCase() != 'vue' && framework != ''"><strong>Not yet. Keep trying!</strong></p>
+								What city is the University of Georgia in? <input v-model="cityName">
+								<p v-if="cityName == 'Athens'">Correct! UGA is in {{ cityName }}</p>
+								<p v-if="cityName != 'Athens' && cityName != ''">Not Yet. Keep Trying!</p>
 							</div>
 
 						</div>
 					</section>
 
-				<!-- Colors -->
+				<!-- Change the color -->
 					<section id="function" class="two">
 						<div class="container">
 
-							<header>
-								<h2>Hover Colors</h2>
-							</header>
-
-							<div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 30px;">
-								<div :style="{ backgroundColor: bgColor, width: '300px', height: '300px', maxWidth: '100%' }" style="border: 1px solid #c9cdd1; border-radius: 6px;"></div>
-								<div>
-									<p v-for="color in colors" @mouseover="changeColor(color)" style="text-align: left; cursor: pointer; margin-bottom: 10px;">
-										Hover to change to {{ color }}
-									</p>
-								</div>
+							<div :style="{ backgroundColor: bgColor, width: '300px', height: '300px', float: 'left' }"></div>
+							<div style="margin-left: 520px;">
+								<p style="text-align: left; cursor: pointer;" v-for="color in colors" @mouseover="changeColor(color)">
+									Hover to change to {{ color }}
+								</p>
 							</div>
+							<div style="clear: both;"></div>
 
 						</div>
 					</section>
