@@ -2118,6 +2118,12 @@ input, select, textarea {
 			margin: 0.5em 0 0 0;
 		}
 
+		#logo h1,
+		#logo p {
+			padding-left: 60px;
+			text-align: left;
+		}
+
 		#logo .image {
 			position: absolute;
 			left: 0;
@@ -2344,6 +2350,11 @@ input, select, textarea {
 			#logo .image {
 				position: relative;
 				margin: 0 0 0.5em 0;
+			}
+
+			#logo h1,
+			#logo p {
+				padding-left: 0;
 			}
 
 			#nav ul li a {

@@ -1,8 +1,8 @@
 var header = new Vue({
     el: '#header',
     data:{
-        yourName: 'Name',
-        description: 'Web Developer',
+        yourName: "Deranta' Avaloy",
+        description: 'Graduate Student at University of Georgia',
         link1: 'Introduction',
         link2: 'My Portfolio',
         link3: 'Learn About Me',
@@ -10,7 +10,7 @@ var header = new Vue({
         link5: 'A Very Important List',
         link6: 'Fill in the Blank',
         link7: 'Change the Color',
-        avatar: "images/me.jpg",
+        avatar: "images/deranta.jpg",
     }
 })
 
@@ -26,20 +26,20 @@ var intro = new Vue({
 var portfolio = new Vue({
     el: '#portfolio',
     data:{
-        portfolioTitle: "Photography Portfolio",
-        image1: "images/one.jpg",
-        imgText1: "Image One",
-        image2: "images/two.jpg",
-        imgText2: "Image Two",
-        image3: "images/three.jpg",
-        imgText3: "Image Three",
-        image4: "images/four.jpg",
-        imgText4: "Image Four",
-        image5: "images/five.jpg",
-        imgText5: "Image Five",
-        image6: "images/six.jpg",
-        imgText6: "Image Six",
-        portfolioText: "I began this portfolio to document my travels. I'm excited to go to more places!"
+        portfolioTitle: "Nature & Water Portfolio",
+        image1: "images/water1.jpg",
+        imgText1: "Sunset Shoreline",
+        image2: "images/water2.jpg",
+        imgText2: "Ocean Waves",
+        image3: "images/water3.jpg",
+        imgText3: "Forest Waterfall",
+        image4: "images/water4.jpg",
+        imgText4: "Still Lake Morning",
+        image5: "images/water5.jpg",
+        imgText5: "Mountain Lake",
+        image6: "images/water6.jpg",
+        imgText6: "Flowing Stream",
+        portfolioText: "Water has a way of telling its own story. This collection celebrates nature through oceans, lakes, rivers, and waterfalls."
     }
 })
 
@@ -48,15 +48,15 @@ var about = new Vue({
     data:{
         aboutTitle: "About Me",
         aboutImage: "images/pic08.jpg",
-        aboutText: "I am a student at the University of Georgia. In this class I am learning HTML, CSS, JavaScript, APIs and Vue.js."
+        aboutText: "My name is Deranta’ Avaloy, and I’m an entrepreneur, filmmaker, and creative media professional based in Atlanta, Georgia. My background includes animation, video game development, filmmaking, and emerging technologies. I recently earned my bachelor’s degree in Film and Media from Georgia State University and am currently pursuing graduate studies in Emerging Media at the University of Georgia. My passion is combining storytelling, technology, and business to create innovative entertainment experiences while continuing to grow both personally and professionally."
     }
 })
 
 var list = new Vue({
     el: '#list',
     data:{
-        listTitle: "My Favorite Restaurants",
-        favorites: ['Chick-fil-A', 'Chipotle', 'Five Guys', 'Olive Garden', 'Panera Bread']
+        listTitle: "My Top 6 Favorite Movies",
+        favorites: ['The Crow', 'Friday', 'Transformers: The Movie (1986)', 'Uptown Saturday Night', 'Chocolate City', 'Dogma']
     }
 })
 
